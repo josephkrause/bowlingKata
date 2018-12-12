@@ -49,3 +49,22 @@ TEST_CASE("Single Pin Game Return 20", "[score]")
     //Assert
     REQUIRE(20 == g.scoreGame());
 }
+
+TEST_CASE("Spare Then 3 Return 16", "[score]")
+{
+    //Arrange
+    Game g;
+    int pins = 0;
+
+    //Act
+    g.roll(5);
+    g.roll(5);
+    g.roll(3);
+    for(int frame = 0; frame < 17; frame++)
+    {
+        g.roll(pins);
+    }
+
+    //Assert
+    REQUIRE(16 == g.scoreGame());
+}
