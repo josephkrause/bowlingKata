@@ -8,6 +8,9 @@
 
 class Game {
 
+public:
+    void roll(int frame);
+    int scoreGame();
 };
 
 
