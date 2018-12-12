@@ -1,11 +1,19 @@
 #define CATCH_CONFIG_MAIN
 #include "catch.hpp"
+#include "Game.h"
 
-TEST_CASE("TestName", "[t]")
+TEST_CASE("Does the Game exist", "[score]")
 {
-        //Arrange
+    //Arrange
+    Game *g = new Game;
+    bool exists = true;
 
-        //Act
+    //Act
+    if(g == NULL)
+    {
+        exists = false;
+    }
 
-        //Assert
+    //Assert
+    REQUIRE(exists == true);
 }

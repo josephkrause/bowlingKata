@@ -3,4 +3,4 @@ project(bowlingKata)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(bowlingKata main.cpp)
+add_executable(bowlingKata main.cpp Game.cpp Game.h)
