@@ -69,3 +69,21 @@ TEST_CASE("Spare Then 3 Return 16", "[score]")
     REQUIRE(16 == g.scoreGame());
 }
 
+TEST_CASE("Strike Then 3 Then 4 Return 24", "[score]")
+{
+    //Arrange
+    Game g;
+    int pins = 0;
+
+    //Act
+    g.roll(10);
+    g.roll(3);
+    g.roll(4);
+    for(int frame = 0; frame < 16; frame++)
+    {
+        g.roll(pins);
+    }
+
+    //Assert
+    REQUIRE(24 == g.scoreGame());
+}
