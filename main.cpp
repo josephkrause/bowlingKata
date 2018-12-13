@@ -68,3 +68,4 @@ TEST_CASE("Spare Then 3 Return 16", "[score]")
     //Assert
     REQUIRE(16 == g.scoreGame());
 }
+
