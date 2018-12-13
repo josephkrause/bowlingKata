@@ -87,3 +87,19 @@ TEST_CASE("Strike Then 3 Then 4 Return 24", "[score]")
     //Assert
     REQUIRE(24 == g.scoreGame());
 }
+
+TEST_CASE("All Strikes Return 300", "[score]")
+{
+    //Arrange
+    Game g;
+    int pins = 10;
+
+    //Act
+    for(int frame = 0; frame < 12; frame++)
+    {
+        g.roll(pins);
+    }
+
+    //Assert
+    REQUIRE(300 == g.scoreGame());
+}

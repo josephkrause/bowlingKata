@@ -24,7 +24,7 @@ int Game::scoreGame()
 
     for(int frame = 0; frame < 10; frame++)
     {
-        if(rolls[rollNum] == 10)
+        if(isStrike(rollNum))
         {
             score += rolls[rollNum] +rolls[rollNum + 1] + rolls[rollNum + 2];
             rollNum += 1;
@@ -47,6 +47,11 @@ int Game::scoreGame()
 bool Game::isSpare(int frameIndex)
 {
     return rolls[frameIndex] + rolls[frameIndex + 1] == 10;
+}
+
+bool Game::isStrike(int frameIndex)
+{
+    return rolls[frameIndex] == 10;
 }
 
 Game::Game()

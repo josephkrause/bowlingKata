@@ -15,6 +15,7 @@ public:
     void roll(int frame);
     int scoreGame();
     bool isSpare(int frameIndex);
+    bool isStrike(int frameIndex);
 };
 
 
